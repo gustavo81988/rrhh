@@ -11,7 +11,7 @@
         <ul class="nav">
 
             <li class="nav-item active ">
-                <a class="nav-link" href="../examples/dashboard.html">
+                <a class="nav-link" href="#">
                     <i class="material-icons">dashboard</i>
                     <p> Dashboard </p>
                 </a>
@@ -27,7 +27,7 @@
                 <div class="collapse" id="administrator">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="../examples/components/buttons.html">
+                            <a class="nav-link" href="#">
                                 <span class="sidebar-mini"> &nbsp; </span>
                                 <span class="sidebar-normal"> Usuarios </span>
                             </a>
@@ -162,7 +162,7 @@
                             </div>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="../examples/components/buttons.html">
+                            <a class="nav-link" href="#">
                                 <span class="sidebar-mini"> &nbsp; </span>
                                 <span class="sidebar-normal"> Nacionalidades </span>
                             </a>
