@@ -3,7 +3,7 @@
         {{-- <a href="http://www.creative-tim.com" class="simple-text logo-mini">
         <img src="{{asset('svg/overall_blue.svg')}}" alt="">
         </a> --}}
-        <a href="http://www.creative-tim.com" class="logo-normal">
+        <a href="{{route('home')}}" class="logo-normal">
             <img style="padding:10px" src="{{asset('svg/overall_blue.svg')}}" alt="">
         </a>
     </div>
