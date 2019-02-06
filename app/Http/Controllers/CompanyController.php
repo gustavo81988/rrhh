@@ -123,8 +123,8 @@ class CompanyController extends Controller
      */
     public function update(StoreCompany $request, Company $company)
     {
-        dd($request);
-        $organization->update($request->all());
+        $company->update($request->validated());
+        return back();
     }
 
     /**
