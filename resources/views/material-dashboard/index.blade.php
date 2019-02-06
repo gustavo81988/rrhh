@@ -26,5 +26,6 @@
         </div>
     </div>
     @include('material-dashboard.scripts')
+    @yield('scripts')
 </body>
 </html>
