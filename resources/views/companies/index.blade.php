@@ -16,16 +16,15 @@
                   </thead>
                   <tbody>
                       @foreach($companies as $company)
-                          <tr>
-
-                              <td>
-                                  <a href="">
-                                      {{$company->name}}
-                                  </a>
-                              </td>
-                              <td>{{$company->email}}</td>
-                              <td>{{$company->phone}}</td>
-                          </tr>
+                        <tr>
+                            <td>
+                                <a href="">
+                                    {{$company->name}}
+                                </a>
+                            </td>
+                            <td>{{$company->email}}</td>
+                            <td>{{$company->phone}}</td>
+                        </tr>
                       @endforeach
                   </tbody>
                 </table>
