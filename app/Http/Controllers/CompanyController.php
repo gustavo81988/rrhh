@@ -8,6 +8,7 @@ use Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCompany;
 
 class CompanyController extends Controller
 {
@@ -108,7 +109,9 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
-        //
+        return view('companies.edit', [
+            'company'=> $company,
+        ]);
     }
 
     /**
@@ -118,9 +121,10 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(StoreCompany $request, Company $company)
     {
-        //
+        dd($request);
+        $organization->update($request->all());
     }
 
     /**
