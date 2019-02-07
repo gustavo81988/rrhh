@@ -47,7 +47,7 @@ class CompanyController extends Controller
         abort_if(Auth::user()->role != 'admin',403);
 
         Company::create($request->validated());
-        return back();
+        return redirect()->route('company.index');
     }
 
     public function user()
