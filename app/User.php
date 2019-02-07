@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Company;
 use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
@@ -31,10 +32,15 @@ class User extends Authenticatable
 
     public function getCompaniesAttribute()
     {
-        $companies  = DB::table('companies')->select('companies.id','companies.name')
-          ->join('users_companies', 'companies.id', '=', 'users_companies.company_id')
-          ->where('users_companies.user_id', '=', $this->id)
-          ->get()->pluck('name','id')->toArray();
+        if($this->role == 'admin'){
+            $companies = Company::all()->pluck('name','id')->toArray();
+        }else{
+            $companies  = DB::table('companies')->select('companies.id','companies.name')
+              ->join('users_companies', 'companies.id', '=', 'users_companies.company_id')
+              ->where('users_companies.user_id', '=', $this->id)
+              ->get()->pluck('name','id')->toArray();
+        }
+
         return $companies;
     }
 
