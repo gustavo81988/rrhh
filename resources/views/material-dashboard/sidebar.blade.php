@@ -270,7 +270,7 @@
                         </li>
                         @if(Auth::user()->role == 'admin')
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{route('company.user')}}">
+                            <a class="nav-link" href="{{route('user.create')}}">
                                 <span class="sidebar-mini">&nbsp;</span>
                                 <span class="sidebar-normal"> Agregar Empleados </span>
                             </a>
