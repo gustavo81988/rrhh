@@ -85,9 +85,10 @@ class CompanyController extends Controller
     public function addForm(User $user){
         abort_if(Auth::user()->role != 'admin',403);
         $companies = Company::all();
+        $users     = User::all();
         return view('companies.add',[
             'companies' => $companies,
-            'user' => $user,
+            'users' => $users,
         ]);
     }
 

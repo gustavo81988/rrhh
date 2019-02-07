@@ -14,13 +14,13 @@
                 <div class="col-sm-10 offset-1">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="form-group bmd-form-group">
-                                <label for="name" class="bmd-label-floating">
-                                    Nombre
-                                </label>
-                                <input disabled type="text" value="{{$user->name}}" class="form-control" id="name">
-                                <input type="hidden" name="user_id" value="{{$user->id}}" class="form-control" id="id">
-
+                            <div class="form-group">
+                                <select class="form-control" name="user_id" >
+                                    <option selected disabled value="">Nombre</option>
+                                    @foreach($users as $user)
+                                        <option value="{{$user->id}}">{{$user->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                     </div>
