@@ -30,7 +30,6 @@
                                 <input required value="{{$user->email}}" type="email" name="email" class="form-control">
                             </div>
                         </div>
-                    
                     </div>
                 </div>
 

@@ -6,6 +6,7 @@ use App\user;
 use App\Company;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreUser;
+use App\Http\Requests\UpdateUser;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -41,7 +42,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function update(StoreUser $request, User $user){
+    public function update(UpdateUser $request, User $user){
         dd($request->validated());
         $user->update($request->validated());
         return redirect()->route('user.index');
