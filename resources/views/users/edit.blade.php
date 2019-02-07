@@ -37,8 +37,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <select required {{Auth::user()->role == $user->role ? 'disabled' : ''}} class="form-control" name="role" >
-                                @if(Auth::user()->role == $user->role)
+                                <select required {{ $user->role == 'admin' ? 'disabled' : ''}} class="form-control" name="role" >
+                                @if( $user->role == 'admin')
                                     <option selected disabled value="admin">Admin</option>
                                 @else
                                     <option selected disabled value="">Roll</option>
