@@ -229,12 +229,18 @@
                 <div class="collapse" id="pagesExamples">
                     <ul class="nav">
                         <li class="nav-item ">
+                            <a class="nav-link" href="{{route('company.index')}}">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Lista </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
                             <a class="nav-link" href="{{route('company.create')}}">
                                 <span class="sidebar-mini">&nbsp;</span>
                                 <span class="sidebar-normal"> Crear </span>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </li>

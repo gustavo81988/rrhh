@@ -18,7 +18,7 @@
                       @foreach($companies as $company)
                         <tr>
                             <td>
-                                <a href="">
+                                <a href="{{route('company.edit',$company->id)}}">
                                     {{$company->name}}
                                 </a>
                             </td>
