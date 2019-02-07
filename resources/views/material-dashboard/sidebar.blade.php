@@ -27,7 +27,7 @@
                 <div class="collapse" id="administrator">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('user.index')}}">
                                 <span class="sidebar-mini"> &nbsp; </span>
                                 <span class="sidebar-normal"> Usuarios </span>
                             </a>
