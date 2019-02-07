@@ -56,6 +56,14 @@ class CompanyController extends Controller
         return view('companies.user',compact('companies'));
     }
 
+    public function userList(){
+        $users  = DB::table('users')->select('users.*')
+          ->join('users_companies', 'users.id', '=', 'users_companies.user_id')
+          ->where('users_companies.company_id', '=', session('company'))
+          ->get();
+        return view('companies.userlist',compact('users'));
+    }
+
     public function register(Request $request)
     {
         $user = User::create([

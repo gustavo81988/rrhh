@@ -17,6 +17,10 @@ Route::group(['middleware' => 'auth'], function(){
         'destroy','show'
     ]);
 
+    Route::resource('user', 'UserController')->except([
+        'destroy','show'
+    ]);
+
     Route::post('/company/register', 'CompanyController@register')->name('company.register');
     Route::get('/company/user'    , 'CompanyController@user')->name('company.user');
     Route::get('/company/add/{user}' , 'CompanyController@addForm')->name('company.addform');
