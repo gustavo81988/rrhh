@@ -56,8 +56,8 @@ class UserController extends Controller
     }
 
     public function destroy(User $user){
-        $status = !($user->status);
-        $user->update(['status' => $status]);
+        $active = !($user->active);
+        $user->update(['active' => $active]);
         return back();
     }
 }

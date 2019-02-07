@@ -28,7 +28,7 @@
                             <form method="POST" action="{{route('user.destroy',$user->id)}}">
                                 @csrf
                                 @method('DELETE')
-                                <td><button type="submit" name="button">{{$user->status ? 'X' : 'O'}}</button></td>
+                                <td><button type="submit" name="button">{{$user->active ? 'X' : 'O'}}</button></td>
                             </form>
                         </tr>
                       @endforeach
