@@ -25,7 +25,7 @@
                             </td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->role}}</td>
-                            <form action="">
+                            <form method="POST" action="{{route('user.destroy',$user->id)}}">
                                 @csrf
                                 @method('DELETE')
                                 <td><button type="submit" name="button">X</button></td>

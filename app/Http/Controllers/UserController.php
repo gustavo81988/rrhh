@@ -54,4 +54,9 @@ class UserController extends Controller
         $user->update($request->validated());
         return redirect()->route('user.index');
     }
+
+    public function destroy(User $user){
+        $user->update(['status' => 0]);
+        return back();
+    }
 }
