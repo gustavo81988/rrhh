@@ -13,6 +13,7 @@
                       <th>Nombre</th>
                       <th>Correo Electronico</th>
                       <th>Cargo</th>
+                      <th></th>
                   </thead>
                   <tbody>
                       @foreach($users as $user)
@@ -24,6 +25,11 @@
                             </td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->role}}</td>
+                            <form action="">
+                                @csrf
+                                @method('DELETE')
+                                <td><button type="submit" name="button">X</button></td>
+                            </form>
                         </tr>
                       @endforeach
                   </tbody>
