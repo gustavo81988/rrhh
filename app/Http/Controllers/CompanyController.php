@@ -88,7 +88,7 @@ class CompanyController extends Controller
         $users     = User::all();
         return view('companies.add',[
             'companies' => $companies,
-            'users' => $users,
+            'user' => $user,
         ]);
     }
 
