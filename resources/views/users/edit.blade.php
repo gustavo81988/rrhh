@@ -37,8 +37,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <select required class="form-control" name="role" >
+                                <select required {{Auth::user()->role == $user->role ? 'disabled' : ''}} class="form-control" name="role" >
+                                @if(Auth::user()->role == $user->role)
+                                    <option selected disabled value="admin">Admin</option>
+                                @else
                                     <option selected disabled value="">Roll</option>
+                                @endif
                                     <option value="manager">Gerente</option>
                                     <option value="padmin">Administrador de Personal</option>
                                     <option value="user">Usuario</option>
@@ -47,6 +51,11 @@
                         </div>
                     </div>
                 </div>
+
+                @if(Auth::user()->role == $user->role)
+                    <input type="hidden" name="role" value="admin">
+                @endif
+
             </div>
         </div>
         <div class="card-footer ml-auto mr-auto">
