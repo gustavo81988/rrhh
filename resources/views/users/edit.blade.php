@@ -62,11 +62,33 @@
             <button type="submit" class="btn btn-rose">
                 Actualizar<div class="ripple-container"></div>
             </button>
-            <a href="{{route()}}">Agregar Empresa</a>
+
+
+
+
+
         </div>
+
+
     </div>
 
 
+
+
+
+
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    </form>
 
     <div class="card ">
         <div class="card-header card-header-rose card-header-text">
@@ -78,7 +100,10 @@
             <div class="row">
                 <div class="col-sm-10 offset-1">
                     <div class="row">
+
+
                         <ul>
+                            <li><a href="{{route('company.addform',$user->id)}}">Agregar Empresa</a></li>
                             @foreach ($companies as $company )
                                 <form method="POST" action="">
                                     @csrf
@@ -98,19 +123,5 @@
 
         </div>
     </div>
-
-
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    </form>
 </div>
 @endsection
