@@ -42,7 +42,7 @@
 
 
 
-                <div class="col-sm-4 offset-2">
+                <div class="col-sm-10 offset-1">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
