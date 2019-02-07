@@ -13,6 +13,7 @@
                       <th>Empresa</th>
                       <th>Correo Electronico</th>
                       <th>Teléfono</th>
+                      <th></th>
                   </thead>
                   <tbody>
                       @foreach($companies as $company)
@@ -24,6 +25,11 @@
                             </td>
                             <td>{{$company->email}}</td>
                             <td>{{$company->phone}}</td>
+                            <form method="POST" action="{{route('company.destroy',$company->id)}}">
+                                @csrf
+                                @method('DELETE')
+                                <td><button type="submit" name="button">X</button></td>
+                            </form>
                         </tr>
                       @endforeach
                   </tbody>
