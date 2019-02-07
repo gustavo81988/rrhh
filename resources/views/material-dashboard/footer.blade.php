@@ -3,8 +3,8 @@
     <nav class="float-left">
       <ul>
         <li>
-          <a href="https://www.creative-tim.com">
-            Creative Tim
+          <a href="#">
+            You Are Over All
           </a>
         </li>
       </ul>
@@ -13,8 +13,8 @@
       &copy;
       <script>
         document.write(new Date().getFullYear())
-      </script>, made with <i class="material-icons">favorite</i> by
-      <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+      </script>
+      <a href="#" target="_blank">Overall</a>
     </div>
     <!-- your footer here -->
   </div>
