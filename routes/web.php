@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function(){
     ]);
 
     Route::post('/company/register', 'CompanyController@register')->name('company.register');
+    Route::post('/company/destroyuser/{user}/{company}', 'CompanyController@destroyuser')->name('company.destroyuser');
     Route::get('/company/user'    , 'CompanyController@user')->name('company.user');
     Route::get('/company/add/{user}' , 'CompanyController@addForm')->name('company.addform');
     Route::post('/company/add' , 'CompanyController@add')->name('company.add');

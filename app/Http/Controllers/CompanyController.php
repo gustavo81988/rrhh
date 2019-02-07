@@ -139,4 +139,8 @@ class CompanyController extends Controller
         $company->delete();
         return redirect()->route('company.index');
     }
+
+    public function destroyuser($user,$company){
+        dd($user);
+    }
 }

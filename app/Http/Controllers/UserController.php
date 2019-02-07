@@ -58,7 +58,7 @@ class UserController extends Controller
 
         return view('users.edit', [
             'user'     => $user,
-            'companues'=> $companies,
+            'companies'=> $companies,
         ]);
     }
 
