@@ -19,6 +19,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
+        abort_if(Auth::user()->role != 'admin',403);
         return view('companies.index', [
             'companies' => Company::all()
         ]);
@@ -41,21 +42,22 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCompany $request)
     {
         abort_if(Auth::user()->role != 'admin',403);
 
-        Company::create($request->all());
+        Company::create($request->validated());
         return back();
     }
 
-    public function user(){
+    public function user()
+    {
         $companies = Company::all();
         return view('companies.user',compact('companies'));
     }
 
-    public function register(Request $request){
-
+    public function register(Request $request)
+    {
         $user = User::create([
             'name'     => request('name'),
             'email'    => request('email'),
@@ -89,18 +91,6 @@ class CompanyController extends Controller
         return back();
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Company  $company
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Company $company)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -109,6 +99,7 @@ class CompanyController extends Controller
      */
     public function edit(Company $company)
     {
+        abort_if(Auth::user()->role != 'admin',403);
         return view('companies.edit', [
             'company'=> $company,
         ]);
@@ -123,6 +114,7 @@ class CompanyController extends Controller
      */
     public function update(StoreCompany $request, Company $company)
     {
+        abort_if(Auth::user()->role != 'admin',403);
         $company->update($request->validated());
         return back();
     }
