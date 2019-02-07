@@ -17,12 +17,6 @@ class UserController extends Controller
         return view('users.index',compact('users'));
     }
 
-    public function edit(User $user){
-        return view('users.edit', [
-            'user'=> $user,
-        ]);
-    }
-
     public function create(){
         $companies = Company::all();
         return view('users.create',compact('companies'));
@@ -38,5 +32,16 @@ class UserController extends Controller
             ['user_id' => $user->id, 'company_id' => request('company_id')]
         );
         return redirect()->route('user.index');
+    }
+
+    public function edit(User $user){
+        return view('users.edit', [
+            'user'=> $user
+        ]);
+    }
+
+    public function update(StoreCompany $request, Company $company){
+        $company->update($request->validated());
+        return redirect()->route('company.index');
     }
 }
