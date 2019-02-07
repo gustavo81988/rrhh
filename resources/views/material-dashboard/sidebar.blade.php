@@ -263,7 +263,7 @@
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{route('home')}}">
+                            <a class="nav-link" href="{{route('user.index')}}">
                                 <span class="sidebar-mini">&nbsp;</span>
                                 <span class="sidebar-normal"> Lista de Empleados </span>
                             </a>
