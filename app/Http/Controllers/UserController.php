@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use App\user;
 use App\Company;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreUser;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -22,7 +23,7 @@ class UserController extends Controller
         return view('users.create',compact('companies'));
     }
 
-    public function store(Request $request){
+    public function store(StoreUser $request){
         $user = User::create([
             'name'     => request('name'),
             'email'    => request('email'),
@@ -40,8 +41,9 @@ class UserController extends Controller
         ]);
     }
 
-    public function update(StoreCompany $request, Company $company){
-        $company->update($request->validated());
-        return redirect()->route('company.index');
+    public function update(StoreUser $request, User $user){
+        dd($request->validated());
+        $user->update($request->validated());
+        return redirect()->route('user.index');
     }
 }
