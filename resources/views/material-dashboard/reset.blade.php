@@ -24,6 +24,21 @@
     <div class="page-header login-page header-filter" filter-color="black" style="background-image: url({{asset('/material-dashboard/assets/img/login2.jpg')}}); background-size: cover; background-position: top center;">
       <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
       <div class="container">
+          @if (session('status'))
+              <div class="alert alert-success" role="alert">
+                  {{ session('status') }}
+              </div>
+          @endif
+          @if($errors->any())
+              <div class="notification is-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{$error}}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
+
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
               <form method="POST" action="{{ route('password.update') }}">
@@ -76,7 +91,7 @@
                           <i class="material-icons">lock_outline</i>
                         </span>
                       </div>
-                      <input type="password" name="password-confirm" class="form-control" placeholder="Password Confirm">
+                      <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirm">
                     </div>
                   </span>
 
