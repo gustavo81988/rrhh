@@ -246,6 +246,7 @@
             </li>
             @endif
 
+            @if(Auth::user()->role == 'admin')
             <li class="nav-item ">
                 <a class="nav-link" data-toggle="collapse" href="#pim">
                     <i class="material-icons">image</i>
@@ -285,7 +286,7 @@
                     </ul>
                 </div>
             </li>
-
+            @endif
             <li class="nav-item ">
                 <a class="nav-link" data-toggle="collapse" href="#license">
                     <i class="material-icons">image</i>
