@@ -50,8 +50,15 @@ class UserController extends Controller
 
     public function edit(User $user){
         abort_if(Auth::user()->role != 'admin',403);
+        $companie_ids = DB::table('users_companies')->select('company_id')
+          ->where('users_companies.user_id', '=', $user->id)
+          ->get()->pluck('company_id')->toArray();
+        $companies = DB::table('companies')->select('*')
+          ->whereIn('id', $companie_ids)->get();
+
         return view('users.edit', [
-            'user'=> $user
+            'user'     => $user,
+            'companues'=> $companies,
         ]);
     }
 

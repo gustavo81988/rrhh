@@ -43,7 +43,7 @@
                                 @else
                                     <option selected disabled value="">Roll</option>
                                 @endif
-                                    <option value="manager">Gerente</option>
+                                    <option value="manager">Manager</option>
                                     <option value="padmin">Administrador de Personal</option>
                                     <option value="user">Usuario</option>
                                 </select>
