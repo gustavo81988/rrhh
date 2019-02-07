@@ -13,7 +13,9 @@
                       <th>Nombre</th>
                       <th>Correo Electronico</th>
                       <th>Cargo</th>
-                      <th></th>
+                      @if(Auth::user()->role == 'admin')
+                          <th></th>
+                      @endif
                   </thead>
                   <tbody>
                       @foreach($users as $user)
@@ -25,11 +27,17 @@
                             </td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->role}}</td>
-                            <form method="POST" action="{{route('user.destroy',$user->id)}}">
-                                @csrf
-                                @method('DELETE')
-                                <td><button type="submit" name="button">{{$user->active ? 'X' : 'O'}}</button></td>
-                            </form>
+                            @if(Auth::user()->role == 'admin')
+                                @if(!(Auth::user()->id == $user->id))
+                                    <form method="POST" action="{{route('user.destroy',$user->id)}}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <td><button type="submit" name="button">{{$user->active ? 'X' : 'O'}}</button></td>
+                                    </form>
+                                @else
+                                    <td></td>
+                                @endif
+                            @endif
                         </tr>
                       @endforeach
                   </tbody>
