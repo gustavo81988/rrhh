@@ -12,10 +12,18 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function index(){
-        $users  = DB::table('users')->select('users.*')
-          ->join('users_companies', 'users.id', '=', 'users_companies.user_id')
-          ->where('users_companies.company_id', '=', session('company'))
-          ->get();
+        $user = auth()->user();
+        if($user->role != 'admin'){
+            $users  = DB::table('users')->select('*')
+              ->where('id', '=', $user->id)
+              ->get();
+        }else{
+            $users  = DB::table('users')->select('users.*')
+              ->join('users_companies', 'users.id', '=', 'users_companies.user_id')
+              ->where('users_companies.company_id', '=', session('company'))
+              ->get();
+        }
+
         return view('users.index',compact('users'));
     }
 
