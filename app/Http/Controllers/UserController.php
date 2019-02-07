@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
-
+use App\user;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,5 +13,11 @@ class UserController extends Controller
           ->where('users_companies.company_id', '=', session('company'))
           ->get();
         return view('users.index',compact('users'));
+    }
+
+    public function edit(User $user){
+        return view('users.edit', [
+            'user'=> $user,
+        ]);
     }
 }
