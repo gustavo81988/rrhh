@@ -22,6 +22,11 @@
         <div class="input-group no-border">
             <select onChange="this.form.submit()" class="selectpicker" data-style="select-with-transition"  title="Choose City" data-size="7">
                 <option selected disabled value="">Empresa</option>
+                @foreach (Auth::user()->companies as $key => $value)
+                    <option {{(Auth::user()->company == $key) ? 'selected' : ''}} value="{{$key}}">
+                        {{$value}}
+                    </option>
+                @endforeach
             </select>
         </div>
       </form>
