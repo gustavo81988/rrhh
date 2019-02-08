@@ -12,295 +12,692 @@
       Creative Tim
     </a>
   </div>
-  <div class="sidebar-wrapper">
-    <div class="user">
-      <div class="photo">
-        <img src="{{asset('material-dashboard-pro/assets/img/faces/avatar.jpg')}}" />
-      </div>
-      <div class="user-info">
-        <a data-toggle="collapse" href="#collapseExample" class="username">
-          <span>
-            Tania Andrew
-            <b class="caret"></b>
-          </span>
-        </a>
-        <div class="collapse" id="collapseExample">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="sidebar-mini"> MP </span>
-                <span class="sidebar-normal"> My Profile </span>
-              </a>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+
+            <li class="nav-item active ">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Dashboard </p>
+                </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="sidebar-mini"> EP </span>
-                <span class="sidebar-normal"> Edit Profile </span>
-              </a>
+            @if(Auth::user()->role == 'admin')
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#administrator">
+                    <i class="material-icons">apps</i>
+                    <p> Administrador
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="administrator">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('user.index')}}">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Usuarios </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#componentsCollapse">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Puesto de Trabajo
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="componentsCollapse">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Títulos de los Puestos </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Escalas Salariales </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Estado del Empleado </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Categorías de Puestos </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Turnos de trabajo </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#organization">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Organización
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="organization">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Información General </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Localización </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Estructura </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#resume">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Currículum
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="resume">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Habilidades </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Formación </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Licencias </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Idiomas </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Membresías </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Nacionalidades </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#config">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Configuración
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="config">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Configuración de correo </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Subscripciones de Correo </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Localización </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Módulos </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Membresías </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="sidebar-mini"> S </span>
-                <span class="sidebar-normal"> Settings </span>
-              </a>
+            @endif
+
+            @if(Auth::user()->role == 'admin')
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                    <i class="material-icons">image</i>
+                    <p>
+                        Empresas
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="pagesExamples">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('company.index')}}">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Lista </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('company.create')}}">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Crear </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
-          </ul>
-        </div>
-      </div>
+            @endif
+
+            @if(Auth::user()->role == 'admin')
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#pim">
+                    <i class="material-icons">image</i>
+                    <p>
+                        Informacion Personal
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="pim">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Configuracion </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('user.index')}}">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Lista de Empleados </span>
+                            </a>
+                        </li>
+                        @if(Auth::user()->role == 'admin')
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('user.create')}}">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Agregar Empleados </span>
+                            </a>
+                        </li>
+                        @endif
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Reportes </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            @endif
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#license">
+                    <i class="material-icons">image</i>
+                    <p>
+                        Licencias y Permisos
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="license">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Listado </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Solicitar </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Mis Permisos</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#auth">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Autorizaciones
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="auth">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Agregar </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Autorizaciones del Empleado </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Mis Derechos </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#leavereport">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Reportes
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="leavereport">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Permisos y ausencias </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Licencias y Permisos </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#leaveconfig">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Configurar
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="leaveconfig">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Período de Permiso </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Tipos de Permisos </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Semana Laboral </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Asignar Permiso </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#time">
+                    <i class="material-icons">image</i>
+                    <p>
+                        Tiempo
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="time">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#timesheet">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Hoja de Asistencia
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="timesheet">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Mis Hojas </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Hojas de Empleados </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#atendance">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Asistencia
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="atendance">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Mis Registros </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Marcar </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal">Registro de Empleados</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal">Configuración</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#timereports">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Reportes
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="timereports">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Proyectos </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Empleados </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal">Asistencia</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#projectinfo">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Inf. del Proyecto
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="projectinfo">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Clientes </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Proyectos </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            @if(Auth::user()->role == 'admin')
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#recruitment">
+                    <i class="material-icons">image</i>
+                    <p>
+                        Reclutamiento
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="recruitment">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Candidatos </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Vacantes </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            @endif
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">dashboard</i>
+                    <p> Mi Información </p>
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" data-toggle="collapse" href="#performance">
+                    <i class="material-icons">image</i>
+                    <p>
+                        Desempeño
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse" id="performance">
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#performanceconfig">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal"> Configurar
+                                <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="performanceconfig">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal">KPI's </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Trackers </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#managetests">
+                                <span class="sidebar-mini"> &nbsp; </span>
+                                <span class="sidebar-normal">
+                                    Evaluaciones
+                                    <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="collapse" id="managetests">
+                                <ul class="nav">
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal">Administrar</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Mis Evaluaciones </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">
+                                        <span class="sidebar-mini"> &nbsp; </span>
+                                        <span class="sidebar-normal"> Revisar Lista </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Mis Busquedas </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">
+                                <span class="sidebar-mini">&nbsp;</span>
+                                <span class="sidebar-normal"> Buscadores de Empleo </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+
+        </ul>
     </div>
-    <ul class="nav">
-      <li class="nav-item active ">
-        <a class="nav-link" href="../examples/dashboard.html">
-          <i class="material-icons">dashboard</i>
-          <p> Dashboard </p>
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-          <i class="material-icons">image</i>
-          <p> Pages
-            <b class="caret"></b>
-          </p>
-        </a>
-        <div class="collapse" id="pagesExamples">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/pricing.html">
-                <span class="sidebar-mini"> P </span>
-                <span class="sidebar-normal"> Pricing </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/rtl.html">
-                <span class="sidebar-mini"> RS </span>
-                <span class="sidebar-normal"> RTL Support </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/timeline.html">
-                <span class="sidebar-mini"> T </span>
-                <span class="sidebar-normal"> Timeline </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/login.html">
-                <span class="sidebar-mini"> LP </span>
-                <span class="sidebar-normal"> Login Page </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/register.html">
-                <span class="sidebar-mini"> RP </span>
-                <span class="sidebar-normal"> Register Page </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/lock.html">
-                <span class="sidebar-mini"> LSP </span>
-                <span class="sidebar-normal"> Lock Screen Page </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/user.html">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal"> User Profile </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/pages/error.html">
-                <span class="sidebar-mini"> E </span>
-                <span class="sidebar-normal"> Error Page </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
-          <i class="material-icons">apps</i>
-          <p> Components
-            <b class="caret"></b>
-          </p>
-        </a>
-        <div class="collapse" id="componentsExamples">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" data-toggle="collapse" href="#componentsCollapse">
-                <span class="sidebar-mini"> MLT </span>
-                <span class="sidebar-normal"> Multi Level Collapse
-                  <b class="caret"></b>
-                </span>
-              </a>
-              <div class="collapse" id="componentsCollapse">
-                <ul class="nav">
-                  <li class="nav-item ">
-                    <a class="nav-link" href="#0">
-                      <span class="sidebar-mini"> E </span>
-                      <span class="sidebar-normal"> Example </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/buttons.html">
-                <span class="sidebar-mini"> B </span>
-                <span class="sidebar-normal"> Buttons </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/grid.html">
-                <span class="sidebar-mini"> GS </span>
-                <span class="sidebar-normal"> Grid System </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/panels.html">
-                <span class="sidebar-mini"> P </span>
-                <span class="sidebar-normal"> Panels </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/sweet-alert.html">
-                <span class="sidebar-mini"> SA </span>
-                <span class="sidebar-normal"> Sweet Alert </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/notifications.html">
-                <span class="sidebar-mini"> N </span>
-                <span class="sidebar-normal"> Notifications </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/icons.html">
-                <span class="sidebar-mini"> I </span>
-                <span class="sidebar-normal"> Icons </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/components/typography.html">
-                <span class="sidebar-mini"> T </span>
-                <span class="sidebar-normal"> Typography </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" data-toggle="collapse" href="#formsExamples">
-          <i class="material-icons">content_paste</i>
-          <p> Forms
-            <b class="caret"></b>
-          </p>
-        </a>
-        <div class="collapse" id="formsExamples">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/forms/regular.html">
-                <span class="sidebar-mini"> RF </span>
-                <span class="sidebar-normal"> Regular Forms </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/forms/extended.html">
-                <span class="sidebar-mini"> EF </span>
-                <span class="sidebar-normal"> Extended Forms </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/forms/validation.html">
-                <span class="sidebar-mini"> VF </span>
-                <span class="sidebar-normal"> Validation Forms </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/forms/wizard.html">
-                <span class="sidebar-mini"> W </span>
-                <span class="sidebar-normal"> Wizard </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
-          <i class="material-icons">grid_on</i>
-          <p> Tables
-            <b class="caret"></b>
-          </p>
-        </a>
-        <div class="collapse" id="tablesExamples">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/tables/regular.html">
-                <span class="sidebar-mini"> RT </span>
-                <span class="sidebar-normal"> Regular Tables </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/tables/extended.html">
-                <span class="sidebar-mini"> ET </span>
-                <span class="sidebar-normal"> Extended Tables </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/tables/datatables.net.html">
-                <span class="sidebar-mini"> DT </span>
-                <span class="sidebar-normal"> DataTables.net </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
-          <i class="material-icons">place</i>
-          <p> Maps
-            <b class="caret"></b>
-          </p>
-        </a>
-        <div class="collapse" id="mapsExamples">
-          <ul class="nav">
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/maps/google.html">
-                <span class="sidebar-mini"> GM </span>
-                <span class="sidebar-normal"> Google Maps </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/maps/fullscreen.html">
-                <span class="sidebar-mini"> FSM </span>
-                <span class="sidebar-normal"> Full Screen Map </span>
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="../examples/maps/vector.html">
-                <span class="sidebar-mini"> VM </span>
-                <span class="sidebar-normal"> Vector Map </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="../examples/widgets.html">
-          <i class="material-icons">widgets</i>
-          <p> Widgets </p>
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="../examples/charts.html">
-          <i class="material-icons">timeline</i>
-          <p> Charts </p>
-        </a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="../examples/calendar.html">
-          <i class="material-icons">date_range</i>
-          <p> Calendar </p>
-        </a>
-      </li>
-    </ul>
-  </div>
+<div class="sidebar-background" style="background-image: url(../assets/img/sidebar-1.jpg) "></div>
 </div>
