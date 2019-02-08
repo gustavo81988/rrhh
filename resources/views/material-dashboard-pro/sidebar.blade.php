@@ -1,17 +1,14 @@
-<div class="sidebar" data-color="rose" data-background-color="black" data-image="{{asset('material-dashboard-pro/assets/img/sidebar-1.jpg')}}">
+<div class="sidebar" data-color="rose"  data-image="{{asset('material-dashboard-pro/assets/img/sidebar-1.jpg')}}">
   <!--
     Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
     Tip 2: you can also add an image using data-image tag
 -->
-  <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-      CT
-    </a>
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-      Creative Tim
-    </a>
-  </div>
+<div class="logo">
+  <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+    <img style="padding:10px" src="{{asset('svg/overall_blue.svg')}}">
+  </a>
+</div>
     <div class="sidebar-wrapper">
         <ul class="nav">
 
