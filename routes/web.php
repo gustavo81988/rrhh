@@ -6,6 +6,9 @@ Route::get('/', ['middleware' =>'guest', function(){
 
 Auth::routes();
 
+Route::get('/pro',function(){
+  return view('pro');
+});
 
 Route::group(['middleware' => 'auth'], function(){
 
