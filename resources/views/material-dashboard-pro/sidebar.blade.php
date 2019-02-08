@@ -731,5 +731,5 @@
 
         </ul>
     </div>
-<div class="sidebar-background" style="background-image: url(../assets/img/sidebar-1.jpg) "></div>
+<div class="sidebar-background" style="background-image: url({{asset('material-dashboard-pro/assets/img/sidebar-1.jpg')}}) "></div>
 </div>
