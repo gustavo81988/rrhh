@@ -77,7 +77,10 @@
                 @endif
                 </div>
                 <div class="card-footer justify-content-center">
-                  <button href="#pablo" type="submit" class="btn btn-rose btn-link btn-lg">Ingresar</button>
+                    <button  type="submit" class="btn btn-rose btn-link btn-lg">Ingresar</button>
+                </div>
+                <div class="card-footer justify-content-center" style="padding-top: 0px !important;">
+                 <a href="{{route('password.request')}}" > <button style="padding-top: 0px !important;" type="button" class="btn btn-rose btn-link btn-lg">Restaurar Contraseña</button></a>
                 </div>
               </div>
             </form>
