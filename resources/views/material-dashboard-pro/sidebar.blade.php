@@ -30,7 +30,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="{{ route('logout') }}">
                     <span class="sidebar-mini"> &nbsp; </span>
                     <span class="sidebar-normal"> Cerrar Sesión </span>
                   </a>
