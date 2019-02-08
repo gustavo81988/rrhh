@@ -1,4 +1,4 @@
-@extends('material-dashboard.index')
+@extends('material-dashboard-pro.index')
 @section('content')
 <div class="col-md-12">
     <form method="POST" action="{{route('company.add')}}">

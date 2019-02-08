@@ -1,4 +1,4 @@
-@extends('material-dashboard.index')
+@extends('material-dashboard-pro.index')
 @section('content')
     <div class="row">
         <div class="col-md-12">

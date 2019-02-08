@@ -1,4 +1,4 @@
-@extends('material-dashboard.index')
+@extends('material-dashboard-pro.index')
 @section('content')
     <div class="container-fluid">
                 <div class="row">
@@ -260,6 +260,6 @@
                                 </div>
                               </div>
                             </div>
-                            
+
                           </div>
 @endsection
