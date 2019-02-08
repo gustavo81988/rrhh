@@ -11,15 +11,14 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     @include('material-dashboard-pro.css')
 </head>
-
-<body class="">
+<body>
     <div class="wrapper ">
         @include('material-dashboard-pro.sidebar')
         <div class="main-panel">
             @include('material-dashboard-pro.navbar')
             <div class="content">
                 <div class="container-fluid">
-
+                    @yield('content')
                 </div>
             </div>
             @include('material-dashboard-pro.footer')
