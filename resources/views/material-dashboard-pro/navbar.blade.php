@@ -17,13 +17,12 @@
       <span class="navbar-toggler-icon icon-bar"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end">
-      <form class="navbar-form">
+      <form class="navbar-form" method="POST" action="{{route('company.select')}}">
+        @csrf
         <div class="input-group no-border">
-          <input type="text" value="" class="form-control" placeholder="Search...">
-          <button type="submit" class="btn btn-white btn-round btn-just-icon">
-            <i class="material-icons">search</i>
-            <div class="ripple-container"></div>
-          </button>
+            <select onChange="this.form.submit()" class="form-control" name="company_id" >
+                <option selected disabled value="">Empresa</option>
+            </select>
         </div>
       </form>
       <ul class="navbar-nav">
