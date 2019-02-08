@@ -1,6 +1,8 @@
 /node_modules
 /public/hot
 /public/storage
+/public/material-dashboard-pro/node_modules
+/public/material-dashboard-pro/package-lock.json
 /storage/*.key
 /vendor
 .env
