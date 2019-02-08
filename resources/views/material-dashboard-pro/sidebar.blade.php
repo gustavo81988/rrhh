@@ -12,12 +12,12 @@
     <div class="sidebar-wrapper">
         <div class="user">
           <div class="photo">
-            <img src="{{asset('material-dashboard-pro/assets/img/faces/avatar.jpg')}}" />
+            <img src="{{asset('material-dashboard-pro/assets/img/faces/marc.jpg')}}" />
           </div>
           <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
               <span>
-                Tania Andrew
+                {{ Auth::user()->name }}
                 <b class="caret"></b>
               </span>
             </a>
