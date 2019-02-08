@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('material-dashboard-pro/assets/img/apple-icon.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('material-dashboard-pro/assets/img/favicon.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Material Dashboard PRO by Creative Tim
@@ -14,7 +14,7 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="rose" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="{{asset('material-dashboard-pro/assets/img/sidebar-1.jpg')}}">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -31,7 +31,7 @@
       <div class="sidebar-wrapper">
         <div class="user">
           <div class="photo">
-            <img src="../assets/img/faces/avatar.jpg" />
+            <img src="{{asset('material-dashboard-pro/assets/img/faces/avatar.jpg')}}" />
           </div>
           <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -414,7 +414,7 @@
                               <tr>
                                 <td>
                                   <div class="flag">
-                                    <img src="../assets/img/flags/US.png" </div>
+                                    <img src="{{asset('material-dashboard-pro/assets/img/flags/US.png')}}" </div>
                                 </td>
                                 <td>USA</td>
                                 <td class="text-right">
@@ -427,7 +427,7 @@
                               <tr>
                                 <td>
                                   <div class="flag">
-                                    <img src="../assets/img/flags/DE.png" </div>
+                                    <img src="{{asset('material-dashboard-pro/assets/img/flags/DE.png')}}" </div>
                                 </td>
                                 <td>Germany</td>
                                 <td class="text-right">
@@ -440,7 +440,7 @@
                               <tr>
                                 <td>
                                   <div class="flag">
-                                    <img src="../assets/img/flags/AU.png" </div>
+                                    <img src="{{asset('material-dashboard-pro/assets/img/flags/AU.png')}}" </div>
                                 </td>
                                 <td>Australia</td>
                                 <td class="text-right">
@@ -453,7 +453,7 @@
                               <tr>
                                 <td>
                                   <div class="flag">
-                                    <img src="../assets/img/flags/GB.png" </div>
+                                    <img src="{{asset('material-dashboard-pro/assets/img/flags/GB.png')}}" </div>
                                 </td>
                                 <td>United Kingdom</td>
                                 <td class="text-right">
@@ -466,7 +466,7 @@
                               <tr>
                                 <td>
                                   <div class="flag">
-                                    <img src="../assets/img/flags/RO.png" </div>
+                                    <img src="{{asset('material-dashboard-pro/assets/img/flags/RO.png')}}" </div>
                                 </td>
                                 <td>Romania</td>
                                 <td class="text-right">
@@ -479,7 +479,7 @@
                               <tr>
                                 <td>
                                   <div class="flag">
-                                    <img src="../assets/img/flags/BR.png" </div>
+                                    <img src="{{asset('material-dashboard-pro/assets/img/flags/BR.png')}}" </div>
                                 </td>
                                 <td>Brasil</td>
                                 <td class="text-right">
@@ -662,7 +662,7 @@
                             <div class="card card-product">
                               <div class="card-header card-header-image" data-header-animation="true">
                                 <a href="#pablo">
-                                  <img class="img" src="../assets/img/card-2.jpg">
+                                  <img class="img" src="{{asset('material-dashboard-pro/assets/img/card-2.jpg')}}">
                                 </a>
                               </div>
                               <div class="card-body">
@@ -701,7 +701,7 @@
                             <div class="card card-product">
                               <div class="card-header card-header-image" data-header-animation="true">
                                 <a href="#pablo">
-                                  <img class="img" src="../assets/img/card-3.jpg">
+                                  <img class="img" src="{{asset('material-dashboard-pro/assets/img/card-3.jpg')}}">
                                 </a>
                               </div>
                               <div class="card-body">
@@ -740,7 +740,7 @@
                             <div class="card card-product">
                               <div class="card-header card-header-image" data-header-animation="true">
                                 <a href="#pablo">
-                                  <img class="img" src="../assets/img/card-1.jpg">
+                                  <img class="img" src="{{asset('material-dashboard-pro/assets/img/card-1.jpg')}}">
                                 </a>
                               </div>
                               <div class="card-body">
@@ -878,22 +878,22 @@
                     <li class="header-title">Images</li>
                     <li class="active">
                       <a class="img-holder switch-trigger" href="javascript:void(0)">
-                        <img src="../assets/img/sidebar-1.jpg" alt="">
+                        <img src="{{asset('material-dashboard-pro/assets/img/sidebar-1.jpg')}}" alt="">
                       </a>
                     </li>
                     <li>
                       <a class="img-holder switch-trigger" href="javascript:void(0)">
-                        <img src="../assets/img/sidebar-2.jpg" alt="">
+                        <img src="{{asset('material-dashboard-pro/assets/img/sidebar-2.jpg')}}" alt="">
                       </a>
                     </li>
                     <li>
                       <a class="img-holder switch-trigger" href="javascript:void(0)">
-                        <img src="../assets/img/sidebar-3.jpg" alt="">
+                        <img src="{{asset('material-dashboard-pro/assets/img/sidebar-3.jpg')}}" alt="">
                       </a>
                     </li>
                     <li>
                       <a class="img-holder switch-trigger" href="javascript:void(0)">
-                        <img src="../assets/img/sidebar-4.jpg" alt="">
+                        <img src="{{asset('material-dashboard-pro/assets/img/sidebar-4.jpg')}}" alt="">
                       </a>
                     </li>
                     <li class="button-container">
