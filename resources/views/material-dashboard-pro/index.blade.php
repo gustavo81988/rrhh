@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="{{asset('material-dashboard-pro/assets/img/favicon.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Material Dashboard PRO by Creative Tim
+        Material Dashboard by Creative Tim
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     @include('material-dashboard-pro.css')
@@ -25,5 +25,6 @@
         </div>
     </div>
     @include('material-dashboard-pro.scripts')
+    @yield('scripts')
 </body>
 </html>
