@@ -141,6 +141,10 @@ class CompanyController extends Controller
     }
 
     public function destroyuser($user,$company){
-        dd($user);
+        DB::table('users_companies')->where([
+            ['user_id', '=', $user],
+            ['company_id', '=', $company],
+        ])->delete();
+        return back();
     }
 }
