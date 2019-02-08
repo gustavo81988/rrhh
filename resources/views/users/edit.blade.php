@@ -105,7 +105,9 @@
                         <ul>
                             <li><a href="{{route('company.addform',$user->id)}}">Agregar Empresa</a></li>
                             @foreach ($companies as $company )
-                                <form method="POST" action="">
+                                <form method="POST" action="{{route('company.destroyuser',[
+                                        'user' => $user->id,'company' => $company->id
+                                    ])}}">
                                     @csrf
                                     <li>
                                         {{$company->name}}
@@ -113,8 +115,8 @@
                                     </li>
                                 </form>
                             @endforeach
-
                         </ul>
+
                     </div>
                 </div>
             </div>
