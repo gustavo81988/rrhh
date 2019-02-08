@@ -66,6 +66,15 @@
                       <input type="password" name="password" class="form-control" placeholder="Password...">
                     </div>
                   </span>
+                  @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 </div>
                 <div class="card-footer justify-content-center">
                   <button href="#pablo" type="submit" class="btn btn-rose btn-link btn-lg">Ingresar</button>
