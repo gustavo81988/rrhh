@@ -20,7 +20,7 @@
       <form class="navbar-form" method="POST" action="{{route('company.select')}}">
         @csrf
         <div class="input-group no-border">
-            <select onChange="this.form.submit()" class="selectpicker" data-style="select-with-transition"  title="Choose City" data-size="7">
+            <select onChange="this.form.submit()" class="selectpicker" data-style="select-with-transition">
                 <option selected disabled value="">Empresa</option>
                 @foreach (Auth::user()->companies as $key => $value)
                     <option {{(Auth::user()->company == $key) ? 'selected' : ''}} value="{{$key}}">
