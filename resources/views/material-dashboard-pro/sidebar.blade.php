@@ -25,20 +25,14 @@
               <ul class="nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <span class="sidebar-mini"> MP </span>
-                    <span class="sidebar-normal"> My Profile </span>
+                    <span class="sidebar-mini"> &nbsp;</span>
+                    <span class="sidebar-normal"> Perfil </span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <span class="sidebar-mini"> EP </span>
-                    <span class="sidebar-normal"> Edit Profile </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span class="sidebar-mini"> S </span>
-                    <span class="sidebar-normal"> Settings </span>
+                    <span class="sidebar-mini"> &nbsp; </span>
+                    <span class="sidebar-normal"> Cerrar Sesión </span>
                   </a>
                 </li>
               </ul>
